@@ -24,7 +24,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="gig in gigs" :key="gig._id">
+          <tr v-for="gig in gigs" :key="gig._id" :class="(gig.payAmount - gig.costOfGas) > 0 ? 'bg-success' : 'bg-danger'"  >
             <td>{{ gig.venue }}</td>
             <td>{{ gig.date }}</td>
             <td>{{ gig.contact }}</td>
@@ -34,10 +34,24 @@
             <td>{{ gig.travelTime }} hrs</td>
             <td>${{ gig.costOfGas }} per gallon</td>
             <td>{{ gig.milesPerGallon }} mpg</td>
-            <td>{{ (gig.milesPerGallon * gig.costOfGas) + gig.travelTime}}</td>
+            <td>{{ gig.payAmount - gig.costOfGas}}</td>
             <td><router-link :to="{name: 'edit', params: { id: gig._id }}" class="btn btn-primary">Edit</router-link></td>
              <td><button class="btn btn-danger" @click.prevent="deleteGig(gig._id)">Delete</button></td>
           </tr>
+          <!-- <tr v-for="gig in gigs" :key="gig._id" v-if="(gig.payAmount - gig.costOfGas) < 0"  class="bg-danger">
+            <td>{{ gig.venue }}</td>
+            <td>{{ gig.date }}</td>
+            <td>{{ gig.contact }}</td>
+            <td>${{ gig.payAmount }}</td>
+            <td>{{ gig.gigLength }} hrs</td>
+            <td>{{ gig.travelDistance }} mi</td>
+            <td>{{ gig.travelTime }} hrs</td>
+            <td>${{ gig.costOfGas }} per gallon</td>
+            <td>{{ gig.milesPerGallon }} mpg</td>
+            <td>{{ gig.payAmount - gig.costOfGas}}</td>
+            <td><router-link :to="{name: 'edit', params: { id: gig._id }}" class="btn btn-primary">Edit</router-link></td>
+             <td><button class="btn btn-danger" @click.prevent="deleteGig(gig._id)">Delete</button></td>
+          </tr> -->
         </tbody>
       </table>
     </div>
