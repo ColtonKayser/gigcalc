@@ -90,7 +90,7 @@
 
 
     </form>
-    <div class="recommendation">
+    <!-- <div class="recommendation">
       <h1>Recommendation</h1>
       <p>You will be paid {{ gig.payAmount }} for {{ gig.gigLength + gig.travelTime }} <p>hours of work.</p>
 
@@ -100,7 +100,7 @@
 
       <h3>This gig is worth taking</h3>
       <h3>This gig is not worth</h3>
-    </div>
+    </div> -->
 
   </div>
 </template>

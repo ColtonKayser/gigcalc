@@ -66,7 +66,7 @@
           this.axios.delete(uri).then(response => {
           this.gigs.splice(this.gigs.findIndex(i => i._id == id), 1);
           })
-        }
+        },
       }
     }
     </script>
