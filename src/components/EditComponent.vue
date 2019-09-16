@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>Edit Gig</h1>
-    <form @submit.prevent="updateGig">
+    <h1 id="edit-heading" class="text-light text-center">Edit Gig</h1>
+    <form id="editf" @submit.prevent="updateGig">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
 
-            <label>Venue:</label>
+            <label class="text-light">Venue:</label>
             <input type="text" class="form" v-model="gig.venue">
           </div>
         </div>
@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Date:</label>
+              <label class="text-light">Date:</label>
               <input class="form" v-model="gig.date">
             </div>
           </div>
@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Contact:</label>
+              <label class="text-light">Contact:</label>
               <input type="text" class="form" v-model="gig.contact">
             </div>
           </div>
@@ -33,7 +33,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label>Pay Amount:</label>
+                <label class="text-light">Pay Amount:</label>
                 <input type="text" class="form" v-model="gig.payAmount">
               </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Length of Gig:</label>
+                  <label class="text-light">Length of Gig:</label>
                   <input type="text" class="form" v-model="gig.gigLength">
                 </div>
               </div>
@@ -51,7 +51,7 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Travel Distance (Round Trip in miles):</label>
+                  <label class="text-light">Travel Distance (Round Trip in miles):</label>
                   <input type="text" class="form" v-model="gig.travelDistance">
                 </div>
               </div>
@@ -60,7 +60,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Travel Time (Round Trip):</label>
+                    <label class="text-light">Travel Time (Round Trip):</label>
                     <input type="text" class="form" v-model="gig.travelTime">
                   </div>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Cost of Gas per Gallon:</label>
+                      <label class="text-light">Cost of Gas per Gallon:</label>
                       <input type="text" class="form" v-model="gig.costOfGas">
                     </div>
                   </div>
@@ -78,7 +78,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Vehicle's Miles Per Gallon:</label>
+                    <label class="text-light">Vehicle's Miles Per Gallon:</label>
                     <input type="text" class="form" v-model="gig.milesPerGallon">
                   </div>
                 </div>

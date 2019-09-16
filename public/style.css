@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
+
+body {
+  font-family: 'Manjari';
+}
+
+#top-heading {
+  font-family: 'Manjari';
+}
+
+#index-header {
+  font-family: 'Manjari';
+}
+
+#about-header {
+  font-family: 'Manjari';
+  font-size: 20px;
+}
+
+#about-description {
+  font-family: 'Manjari';
+}
+
+#create-heading {
+  font-family: 'Manjari';
+}
+
+#edit-heading {
+  font-family: 'Manjari';
+}
+
+
+
+#main-nav {
+  font-family: 'Manjari';
+}
+
+#create-form {
+  font-family: 'Manjari';
+  font-size: 17.5px;
+}
+
+.site-footer {
+  margin-top: 200px;
+}

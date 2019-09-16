@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>Calculator</h1>
-    <form @submit.prevent="addGig">
+    <h1 id="create-heading" class="text-light text-center">Calculator</h1>
+    <form id="create-form" class="text-right" style="margin-left: 220px;" @submit.prevent="addGig">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Venue:</label>
-            <input type="text" class="form" v-model="gig.venue">
+            <label class="text-light">Venue:   </label>
+            <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.venue">
           </div>
         </div>
         </div>
@@ -14,8 +14,8 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Date:</label>
-              <input class="form" v-model="gig.date">
+              <label class="text-light">Date:</label>
+              <input class="form text-light" style="background-color: #2F4F4F;" v-model="gig.date">
             </div>
           </div>
         </div>
@@ -23,8 +23,8 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Contact:</label>
-              <input type="text" class="form" v-model="gig.contact">
+              <label class="text-light">Contact:</label>
+              <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.contact">
             </div>
           </div>
           </div>
@@ -32,8 +32,8 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label>Pay Amount:</label>
-                <input type="text" class="form" v-model="gig.payAmount">
+                <label class="text-light">Pay Amount:</label>
+                <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.payAmount">
               </div>
             </div>
             </div>
@@ -41,8 +41,8 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Length of Gig:</label>
-                  <input type="text" class="form" v-model="gig.gigLength">
+                  <label class="text-light">Length of Gig (in hours):</label>
+                  <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.gigLength">
                 </div>
               </div>
               </div>
@@ -50,8 +50,8 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Travel Distance (Round Trip in miles):</label>
-                  <input type="text" class="form" v-model="gig.travelDistance">
+                  <label class="text-light">Distance (Round Trip in miles):</label>
+                  <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.travelDistance">
                 </div>
               </div>
               </div>
@@ -59,8 +59,8 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Travel Time (Round Trip):</label>
-                    <input type="text" class="form" v-model="gig.travelTime">
+                    <label class="text-light">Travel Time (in hours):</label>
+                    <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.travelTime">
                   </div>
                 </div>
                 </div>
@@ -68,8 +68,8 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label>Cost of Gas per Gallon:</label>
-                      <input type="text" class="form" v-model="gig.costOfGas">
+                      <label class="text-light">Cost of Gas per Gallon:</label>
+                      <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.costOfGas">
                     </div>
                   </div>
                   </div>
@@ -77,15 +77,15 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Vehicle's Miles Per Gallon:</label>
-                    <input type="text" class="form" v-model="gig.milesPerGallon">
+                    <label class="text-light">Vehicle's Miles Per Gallon:</label>
+                    <input type="text" class="form text-light" style="background-color: #2F4F4F;" v-model="gig.milesPerGallon">
                   </div>
                 </div>
                 </div>
 
         <br />
         <div class="form-group">
-          <button class="btn btn-primary">Save</button>
+          <button class="btn border-light text-light" style="background-color: #2F4F4F; margin-right: 507px;">Calculate</button>
         </div>
 
 
@@ -114,7 +114,7 @@
     },
     methods: {
       math() {
-        
+
       },
       addGig() {
         let uri = 'http://localhost:4000/gigs/add';
