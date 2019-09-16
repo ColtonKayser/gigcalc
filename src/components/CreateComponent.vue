@@ -88,18 +88,19 @@
           <button class="btn btn-primary">Save</button>
         </div>
 
-        <div class="recommendation">
-          <h1>Recommendation</h1>
-          <p>You will be paid $(payAmount) for (length of gig + travel time) hours of work.</p>
 
-          <p>Gas will cost you $((travel distance/mpg) * Cost of gas).</p>
-
-          <p>Your net pay will be $(payamount - ((travel distance/mpg) * Cost of gas)) or $(prev variable/total time)</p>
-
-          <h3>This gig is worth taking</h3>
-          <h3>This gig is not worth</h3>
-        </div>
     </form>
+    <div class="recommendation">
+      <h1>Recommendation</h1>
+      <p>You will be paid {{ gig.payAmount }} for {{ gig.gigLength + gig.travelTime }} <p>hours of work.</p>
+
+      <p>Gas will cost you ${{ ( ( gig.travelDistance / gig.milesPerGallon ) * gig.costOfGas ) }}.</p>
+
+      <p>Your net pay will be $(payamount - ((travel distance/mpg) * Cost of gas)) or $(prev variable/total time)</p>
+
+      <h3>This gig is worth taking</h3>
+      <h3>This gig is not worth</h3>
+    </div>
 
   </div>
 </template>
@@ -112,6 +113,9 @@
         }
     },
     methods: {
+      math() {
+        
+      },
       addGig() {
         let uri = 'http://localhost:4000/gigs/add';
         this.axios.post(uri, this.gig).then(() => {

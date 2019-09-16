@@ -20,6 +20,7 @@
             <th>Travel Time</th>
             <th>Cost of Gas</th>
             <th>Miles Per Gallon</th>
+            <th>Math</th>
           </tr>
         </thead>
         <tbody>
@@ -33,7 +34,9 @@
             <td>{{ gig.travelTime }} hrs</td>
             <td>${{ gig.costOfGas }} per gallon</td>
             <td>{{ gig.milesPerGallon }} mpg</td>
+            <td>{{ (gig.milesPerGallon * gig.costOfGas) + gig.travelTime}}</td>
             <td><router-link :to="{name: 'edit', params: { id: gig._id }}" class="btn btn-primary">Edit</router-link></td>
+             <td><button class="btn btn-danger" @click.prevent="deleteGig(gig._id)">Delete</button></td>
           </tr>
         </tbody>
       </table>
@@ -52,6 +55,15 @@
         this.axios.get(uri).then(response => {
           this.gigs = response.data
         })
+      },
+      methods: {
+        deleteGig(id)
+        {
+          let uri = `http://localhost:4000/gigs/delete/${id}`;
+          this.axios.delete(uri).then(response => {
+          this.gigs.splice(this.gigs.findIndex(i => i._id == id), 1);
+          })
+        }
       }
     }
     </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>THE GIG CALCULATOR</h1>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link to="/" class="nav-link">About</router-link>
